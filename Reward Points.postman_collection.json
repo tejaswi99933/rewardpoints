@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "41de8eab-a622-4014-bf13-936244a31e7e",
+		"name": "Reward Points",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllBills",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/rewardpoints",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rewardpoints"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Purchased Items",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerId\": 1,\n    \"billItems\": \"toaste\",\n    \"billAmounts\": 151\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/rewardpoints",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rewardpoints"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CustomerReport",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/rewardpoints/customerReport?startDate=2023-01-01&endDate=2023-04-04&clientid=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rewardpoints",
+						"customerReport"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2023-01-01"
+						},
+						{
+							"key": "endDate",
+							"value": "2023-04-04"
+						},
+						{
+							"key": "clientid",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Total Points",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/rewardpoints/totalPoints?startDate=2023-01-01&endDate=2023-04-04&clientid=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rewardpoints",
+						"totalPoints"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2023-01-01"
+						},
+						{
+							"key": "endDate",
+							"value": "2023-04-04"
+						},
+						{
+							"key": "clientid",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
